@@ -166,11 +166,11 @@ class Manifiesto(APIView):
             Story.append(PageBreak())
 
             textEvidencia = Paragraph(data['manifest']['novelties'][0]['evidence_type'] + " Novedad", estilo['Normal'])
-            I = Image(data['manifest']['novelties'][0]['file'])
+            I = Image(data['manifest']['novelties'][0]['file'], width=170, height=150)
             textFirma1 = Paragraph("Firma quien entrega", estilo['Normal'])
-            signaClient = Image(data['manifest']['signatures'][1]['signature_file'])
+            signaClient = Image(data['manifest']['signatures'][1]['signature_file'], width=170, height=150)
             textFirma2 = Paragraph("Firma quien recoge", estilo['Normal'])
-            signaEmployee = Image(data['manifest']['signatures'][3]['signature_file'])
+            signaEmployee = Image(data['manifest']['signatures'][3]['signature_file'], width=170, height=150)
             finalText = Paragraph("El presente manifiesto no se constituye como acta de tratamiento y/o disposición final, por tanto su validez únicamente corresponde a la del manifiesto de recolección y transporte de residuos de riesgo biológico", estilo['Normal'])
 
             t = Table(
