@@ -29,7 +29,7 @@ class Manifiesto(APIView):
     permission_classes = (IsAuthenticated,)
     
     def get(self, request):
-        doc = SimpleDocTemplate("manifiestos/" + filename, pagesize = pagesize, topMargin=1 * cm, bottomMargin=1 * cm, leftMargin=30)    # Directorio raíz de la app.
+        doc = SimpleDocTemplate("manifiestos/" + filename, pagesize = pagesize, topMargin=1 * cm, bottomMargin=1 * cm, leftMargin=60)    # Directorio raíz de la app.
 
         def procesoPpal(Story):
             """ Creación del informe. """
